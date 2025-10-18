@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>al banco | meny</title>
+    <link rel="stylesheet" href="temp.css" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html"
+        ><img class="logo" src="logo1.png" alt="al banco logo"
+      /></a>
+      <nav>
+        <ul class="nav__links">
+          <li><a href="index.html">hem</a></li>
+          <li><a href="menu.html" class="active">meny</a></li>
+          <li><a href="about.html">om oss</a></li>
+          <li><a href="contact.html">kontakt</a></li>
+          <li><a href="#">event</a></li>
+        </ul>
+      </nav>
+      <a class="cta" href="#"><button>boka bord</button></a>
+    </header>
+
+    <main>
+      <!--<div class="menu-buttons">
+        <a href="#"><button class="nav-button1">LUNCH</button></a>
+        <a href="#"><button class="nav-button2">A LA CARTE</button></a>
+      </div>-->
+      <h2 class="menu-header">VÅRA MENYER</h2>
+      <div class="menu-container">
+        <section class="menu-wrapper">
+          <h2>LUNCH</h2>
+          <p class="sub-text">
+            serveras fram till kl 18:00<br />lunchpriser vardagar 11:00-14:00
+            <b>129:-</b>
+          </p>
+
+          <div class="menu-item">
+            <div class="item-row">
+              <h3>carbonara <span class="price">129:-</span></h3>
+            </div>
+            <p>guanciale, pecorino, äggula</p>
+          </div>
+
+          <div class="menu-item">
+            <div class="item-row">
+              <h3>amatriciana <span class="price">129:-</span></h3>
+            </div>
+            <p>soffritto, tomat, guanciale, parmesan, stracciatella</p>
+          </div>
+
+          <div class="menu-item">
+            <div class="item-row">
+              <h3>
+                pistage pesto <span class="veg">(v)</span>
+                <span class="price">129:-</span>
+              </h3>
+            </div>
+            <p>pistage, basilika, stracciatella, parmesan</p>
+          </div>
+
+          <div class="menu-item">
+            <div class="item-row">
+              <h3>
+                pomodoro <span class="veg">(v)</span>
+                <span class="price">129:-</span>
+              </h3>
+            </div>
+            <p>san marzano, basilika, stracciatella, parmesan</p>
+          </div>
+          <div class="menu-item">
+            <div class="item-row">
+              <h3>
+                arrabiata <span class="veg">(v)</span>
+                <span class="price">129:-</span>
+              </h3>
+            </div>
+            <p>tomat, chili, vitlök (stark)</p>
+          </div>
+        </section>
+
+        <!-- A LA CARTE-MENY -->
+
+        <section class="menu-wrapper">
+          <h2>A LA CARTE</h2>
+          <p class="sub-text">serveras mellan 18:00 och 22:00</p>
+
+          <div class="menu-item">
+            <div class="item-row">
+              <h4>antipasti</h4>
+              <h3>caprese <span class="price">109:-</span></h3>
+              <h3>tre bruschette <span class="price">109:-</span></h3>
+              <h3>gamberetti <span class="price">119:-</span></h3>
+              <br /><br />
+              <h4>primi piatti</h4>
+              <h3>pasta carbonara <span class="price">195:-</span></h3>
+              <h3>pistage pesto <span class="price">195:-</span></h3>
+              <h3>scampi svezia <span class="price">205:-</span></h3>
+              <h3>ragú di banco <span class="price">215:-</span></h3>
+              <br /><br />
+              <h4>stagione</h4>
+              <h3>
+                spaghetti funghie tartufo <span class="price">195:-</span>
+              </h3>
+              <br /><br />
+              <h4>dolci</h4>
+              <h3>tiramisú <span class="price">79:-</span></h3>
+              <h3>cannoli siciliani <span class="price">65:-</span></h3>
+              <h3>limone limone limone <span class="price">99:-</span></h3>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+      till toppen
+    </button>
+    <script>
+      // Get the button:
+      let mybutton = document.getElementById("myBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      }
+    </script>
+  </body>
+</html>

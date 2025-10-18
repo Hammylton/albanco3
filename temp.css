@@ -1,0 +1,487 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dosis:wght@200..800&family=Engagement&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shadows+Into+Light&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Vujahday+Script&display=swap");
+/* Reset + grundfärg */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  background-color: #1d1d1d;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 3px;
+}
+
+/* Globala textstilar */
+li,
+a,
+button {
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 3px;
+  font-weight: 350;
+  font-size: 20px;
+  color: #ffbd59;
+  text-decoration: none;
+}
+
+/* Header + Navigation */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center; /*Ändrad från space-between */
+  align-items: center;
+  padding: 20px 8%;
+  background-color: #1d1d1d; /* lite starkare än bakgrundsfärgen #221914 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* lätt skugga för djup */
+  height: 160px;
+  border-bottom: 0.5px solid #ffbd59;
+}
+
+.logo {
+  width: 200px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-right: -10px;
+}
+
+.nav__links {
+  list-style: none;
+}
+
+.nav__links li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.nav__links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  color: #6b8e23;
+}
+
+/* Knapp */
+button {
+  padding: 9px 37px;
+  background-color: #ffbd59; /*#221914*/
+  color: #1d1d1d;
+  border: none;
+  border-radius: 50px;
+  border: 1px solid #1d1d1d;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover {
+  background-color: rgba(107, 142, 35, 0.8);
+  border: 1px solid #221914;
+}
+
+/* Innehåll */
+.main {
+  text-align: center;
+  margin-top: 200px;
+}
+
+h1 {
+  font-weight: lighter;
+  font-size: 75px;
+  color: #ffbd59;
+  margin-bottom: 0px;
+  margin-top: 40px;
+  letter-spacing: 10px;
+  font-family: "Libre Baskerville", sans-serif;
+  /*transform: scaley(1.1);*/
+}
+
+.intro {
+  margin-top: 00px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  color: #ffbd59;
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 300;
+}
+
+.intro a {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #c88003;
+}
+
+/* menu.html – menysektion */
+.menu-wrapper {
+  background-color: #ffce85;
+  padding: 50px 3%;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.55);
+  flex: 1 1 45%; /* ca halva bredden */
+  max-width: 800px; /* så de inte växer för mycket */
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px; /* avstånd mellan menyerna */
+  flex-wrap: wrap;
+  margin: 40px auto;
+  max-width: 1500px; /* begränsar hela sektionen */
+  padding: 0 20px; /* lite luft på sidorna */
+}
+
+.menu-divider {
+  width: 1px;
+  background-color: #faf3e0;
+  opacity: 0.3;
+  height: auto; /* följer höjden på innehållet */
+}
+
+.menu-wrapper h2 {
+  color: #1d1d1d;
+  font-size: 50px;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  font-family: "Libre Baskerville", sans-serif;
+  letter-spacing: 10px;
+}
+
+.menu-item {
+  margin-bottom: 28px;
+  padding-bottom: 18px;
+  text-align: center;
+}
+
+.item-row {
+  align-items: baseline;
+}
+
+.item-row h3 {
+  font-size: 27px;
+  font-weight: 400;
+  color: #1d1d1d;
+  letter-spacing: 12px;
+}
+
+.price {
+  font-weight: 500;
+  color: #1d1d1d;
+  font-size: 21px;
+  letter-spacing: 13px;
+  font-weight: 700;
+}
+
+.veg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  vertical-align: middle;
+  line-height: 1;
+  white-space: nowrap; /* Hindrar radbrytning */
+}
+
+.menu-item p {
+  font-size: 17px;
+  color: #1d1d1d;
+  margin-top: -5px;
+  font-weight: 200;
+  font-weight: 100;
+  letter-spacing: 10px;
+  font-style: italic;
+}
+
+.active {
+  border-bottom: 2px solid #faf3e0;
+}
+
+/*main h2 {
+  color: #faf3e0;
+  font-size: 30px;
+  font-weight: 350;
+  text-align: center;
+  margin-top: 30px;
+}*/
+
+iframe {
+  margin-bottom: 40px;
+}
+
+.logo-test {
+  text-align: center;
+  font-size: 35px;
+  margin-left: 60px;
+  line-height: 0.6;
+  margin-top: 10px;
+  font-family: "Libre Baskerville", sans-serif;
+  font-weight: 200;
+  color: #ffbd59;
+  letter-spacing: 7px;
+}
+
+.logo-p2 {
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 10px;
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  flex-wrap: wrap; /* så att det funkar på mobil */
+}
+
+.map-section {
+  flex: 1 1 450px;
+}
+
+.hours-section {
+  flex: 1 1 250px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  color: #512520;
+}
+
+.hours-section h3 {
+  color: #ffa200;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.hours-section ul li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #6b8e23; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px 25px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+.buttons {
+  text-align: center;
+  align-items: center;
+}
+
+.buttons button {
+  margin-top: 20px;
+  text-align: center;
+  background-color: #ffbd59;
+  border: none;
+  color: #1d1d1d;
+  font-weight: lighter;
+  font-family: "Open Sans", sans-serif;
+  margin-right: 10px;
+  margin-bottom: 130px;
+}
+
+.nav-button2 {
+  margin-left: -10px;
+  margin-right: 0px;
+}
+
+.nav-button1 {
+  padding-left: 67px;
+  padding-right: 67px;
+}
+
+.buttons button:hover {
+  background-color: #c88003;
+  transition: all 0.3s ease 0s;
+}
+
+.sub-text {
+  text-align: center;
+  margin-top: -40px;
+  margin-bottom: 40px;
+  letter-spacing: 7px;
+  font-size: 20px;
+  font-style: italic;
+  color: #1d1d1d;
+}
+
+h4 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  font-family: "Libre Baskerville", sans-serif;
+  font-style: italic;
+  font-weight: 100;
+  color: #1d1d1d;
+}
+
+.contact {
+  text-align: center;
+  margin-top: 180px;
+}
+
+.contact h2,
+.about-us h2 {
+  color: #ffbd59;
+  font-size: 50px;
+  font-family: "Libre Baskerville", sans-serif;
+  font-weight: 100;
+}
+
+.contact-container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px; /* avstånd mellan menyerna */
+  flex-wrap: wrap;
+  margin: 40px auto;
+  max-width: 1300px; /* begränsar hela sektionen */
+  padding: 0 20px; /* lite luft på sidorna */
+}
+
+.find-us,
+.opening-hours {
+  width: 600px;
+  padding: 20px;
+}
+
+.menu-header {
+  margin-top: 100px;
+  text-align: center;
+  color: #ffbd59;
+  font-size: 50px;
+  font-family: "Libre Baskerville", sans-serif;
+  font-weight: 100;
+}
+
+.socials {
+  margin-top: 20px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  color: #ffbd59;
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 300;
+}
+
+.about-container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* avstånd mellan menyerna */
+  flex-wrap: wrap;
+  margin: 40px auto;
+  max-width: 1300px; /* begränsar hela sektionen */
+  padding: 0 20px; /* lite luft på sidorna */
+  margin-top: 100px;
+}
+
+.our-history {
+  width: 700px;
+}
+
+.intro2 {
+  color: #ffbd59;
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 300;
+}
+
+/* === Footer === */
+.footer {
+  background-color: #1d1d1d;
+  color: #ffbd59;
+  padding: 60px 10%;
+  margin-top: 100px;
+  border-top: 1px solid #ffbd59;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 15px;
+  text-align: center;
+}
+
+.footer li {
+  color: #ffbd59;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-section {
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 10px;
+}
+
+.footer-section h3 {
+  color: #ffbd59;
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.footer-section a {
+  color: #faf3e0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #c88003;
+}
+
+@media only screen and (max-width: 600px) {
+  iframe {
+    width: 430px;
+  }
+}
