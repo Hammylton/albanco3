@@ -38,6 +38,70 @@
         }
       }
     </style>
+    <!-- Datumväljare -->
+    <script>
+      const dateInput = document.getElementById("date");
+      dateInput.addEventListener("mousedown", (e) => {
+        e.preventDefault();
+        if (dateInput.showPicker) dateInput.showPicker();
+      });
+    </script>
+
+    <!-- Form submission med spinner -->
+    <script>
+      const form = document.getElementById("booking-form");
+      const spinner = document.getElementById("spinner-overlay");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        // Visa spinner
+        spinner.style.display = "flex";
+
+        const formData = new FormData(form);
+        const params = new URLSearchParams();
+        formData.forEach((value, key) => params.append(key, value));
+
+        try {
+          const response = await fetch(form.action, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+            },
+            body: params.toString(),
+          });
+
+          if (response.ok) {
+            window.location.href = "tack.html";
+          } else {
+            alert("Något gick fel. Försök igen.");
+            spinner.style.display = "none";
+          }
+        } catch (err) {
+          alert("Något gick fel. Försök igen.");
+          spinner.style.display = "none";
+        }
+      });
+    </script>
+    <script>
+      // Hamburgermeny
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("navLinks");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navLinks.classList.toggle("active");
+      });
+
+      // Stäng menyn när man klickar på en länk
+      const links = navLinks.querySelectorAll("a");
+      links.forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navLinks.classList.remove("active");
+        });
+      });
+    </script>
   </head>
   <body>
     <header>
@@ -206,70 +270,5 @@
         </div>
       </div>
     </footer>
-
-    <!-- Datumväljare -->
-    <script>
-      const dateInput = document.getElementById("date");
-      dateInput.addEventListener("mousedown", (e) => {
-        e.preventDefault();
-        if (dateInput.showPicker) dateInput.showPicker();
-      });
-    </script>
-
-    <!-- Form submission med spinner -->
-    <script>
-      const form = document.getElementById("booking-form");
-      const spinner = document.getElementById("spinner-overlay");
-
-      form.addEventListener("submit", async (e) => {
-        e.preventDefault();
-
-        // Visa spinner
-        spinner.style.display = "flex";
-
-        const formData = new FormData(form);
-        const params = new URLSearchParams();
-        formData.forEach((value, key) => params.append(key, value));
-
-        try {
-          const response = await fetch(form.action, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
-            },
-            body: params.toString(),
-          });
-
-          if (response.ok) {
-            window.location.href = "tack.html";
-          } else {
-            alert("Något gick fel. Försök igen.");
-            spinner.style.display = "none";
-          }
-        } catch (err) {
-          alert("Något gick fel. Försök igen.");
-          spinner.style.display = "none";
-        }
-      });
-    </script>
-    <script>
-      // Hamburgermeny
-      const hamburger = document.getElementById("hamburger");
-      const navLinks = document.getElementById("navLinks");
-
-      hamburger.addEventListener("click", () => {
-        hamburger.classList.toggle("active");
-        navLinks.classList.toggle("active");
-      });
-
-      // Stäng menyn när man klickar på en länk
-      const links = navLinks.querySelectorAll("a");
-      links.forEach((link) => {
-        link.addEventListener("click", () => {
-          hamburger.classList.remove("active");
-          navLinks.classList.remove("active");
-        });
-      });
-    </script>
   </body>
 </html>
