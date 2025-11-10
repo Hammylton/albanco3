@@ -3,12 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>al banco | kontakt</title>
+    <title>al banco | hem</title>
     <link rel="stylesheet" href="temp.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
   </head>
   <body>
     <header>
@@ -23,7 +19,7 @@
         <ul class="nav__links" id="navLinks">
           <li><a href="index.html">hem</a></li>
           <li><a href="menu.html">meny</a></li>
-          <li><a href="about.html" class="active">om oss</a></li>
+          <li><a href="about.html">om oss</a></li>
           <li><a href="contact.html">kontakt</a></li>
           <li><a href="events.html">event</a></li>
           <li class="mobile-cta">
@@ -43,36 +39,118 @@
       <a class="cta" href="booking.html">boka bord</a>
     </header>
 
-    <main class="about-us">
-      <h2>om oss</h2>
-      <!--<h2>KONTAKT</h2>-->
-      <div class="about-container">
-        <!--<h1>al banco</h1>
-      <div class="buttons">
-        <a href="menu.html"><button class="nav-button1">MENY</button></a>
-        <a href="#"><button class="nav-button2">BOKA BORD</button></a>
-      </div>-->
-        <div class="our-history">
-          <p class="intro2">
-            Här får tiden gå lite långsammare - precis som i Italien. Vi bakar
-            ny pasta varje morgon och tillagar den endast med färska råvaror
-            direkt från Italien.<br />Vi tycker att kvalitet behöver vara
-            genomgående och därför är varje tallrik ett hantverk i sig.<br /><br />
-            Har du bråttom utöver det vanliga? Hos oss tar maten den tid den
-            behöver - vilket är precis vad
-            <b>riktigt god pasta</b> kräver.
-          </p>
-        </div>
-        <div class="food-img">
-          <a href="menu.html"
-            ><img
-              class="food"
-              src="al-banco-pasta.jpg"
-              alt="Bild på al banco pastarätt"
-          /></a>
-        </div>
+    <main class="contact-form-section">
+      <h2>boka event</h2>
+      <form
+        id="event-form"
+        action="https://script.google.com/macros/s/AKfycbwdNb1fer8hyNTBNceXoXGR4MBVtef-S1yP-wTDNAaLaYPGDh5jxoaIUSNL1K5II1La3w/exec"
+        method="POST"
+        class="contact-form"
+      >
+        <label for="name">namn</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="ditt namn"
+          required
+        />
+
+        <label for="phone">telefonnummer</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="070-123 45 67"
+          required
+        />
+
+        <label for="email">mejladress</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="namn@mail.com"
+          required
+        />
+
+        <label for="event">event</label>
+        <select id="event" name="event" required>
+          <option value="">välj event</option>
+          <option value="hemma hos dig">hemma hos dig</option>
+          <option value="vinresa">vinresa</option>
+        </select>
+
+        <label for="date">önskat datum</label>
+        <input
+          id="date"
+          type="date"
+          name="date"
+          required
+          onkeydown="return false"
+          onpaste="return false"
+        />
+
+        <label for="message">meddelande</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          placeholder="här kan du uppge allergier, specialkost, önskemål och dylikt..."
+        ></textarea>
+
+        <button type="submit">skicka</button>
+      </form>
+      <p class="intro">
+        notera att detta endast är en bokningsförfrågan - denna är inte bindande
+        på något sätt.
+      </p>
+
+      <div class="spinner-overlay" id="spinner-overlay" style="display: none">
+        <div class="spinner"></div>
       </div>
     </main>
+
+    <script>
+      const dateInput = document.getElementById("date");
+      dateInput.addEventListener("mousedown", (e) => {
+        e.preventDefault();
+        if (dateInput.showPicker) dateInput.showPicker();
+      });
+
+      const form = document.getElementById("event-form");
+      const spinner = document.getElementById("spinner-overlay");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        spinner.style.display = "flex";
+
+        const formData = new FormData(form);
+        const params = new URLSearchParams();
+        formData.forEach((val, key) => params.append(key, val));
+
+        try {
+          const response = await fetch(form.action, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+            },
+            body: params.toString(),
+          });
+
+          if (response.ok) {
+            window.location.href = "tack.html";
+          } else {
+            alert("Något gick fel. Försök igen.");
+            spinner.style.display = "none";
+          }
+        } catch (error) {
+          alert("Något gick fel. Försök igen.");
+          spinner.style.display = "none";
+        }
+      });
+    </script>
+
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-section">

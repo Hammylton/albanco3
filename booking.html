@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>al banco | boka bord</title>
+    <link rel="stylesheet" href="temp.css" />
+    <style>
+      /* Spinner-stil */
+      .spinner-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.6);
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
+
+      .spinner {
+        border: 6px solid #f3f3f3;
+        border-top: 6px solid #333;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo-div">
+        <a href="index.html"
+          ><img class="logo" src="al banco2.png" alt="al banco logo"
+        /></a>
+      </div>
+      <!-- <p class="logo-test">al banco<br /><span class="logo-p2">PASTA</span></p> -->
+
+      <nav>
+        <ul class="nav__links" id="navLinks">
+          <li><a href="index.html">hem</a></li>
+          <li><a href="menu.html">meny</a></li>
+          <li><a href="about.html">om oss</a></li>
+          <li><a href="contact.html">kontakt</a></li>
+          <li><a href="events.html">event</a></li>
+          <li class="mobile-cta">
+            <a href="booking.html"><span class="active1">boka bord</span></a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Hamburgerikon -->
+      <a class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+
+      <!-- Desktop boka bord-knapp -->
+      <a class="cta" href="booking.html"
+        ><span class="active1">boka bord</span></a
+      >
+    </header>
+
+    <main class="contact-form-section">
+      <h2>boka bord</h2>
+      <form
+        id="booking-form"
+        action="https://script.google.com/macros/s/AKfycbyshQs87gUjrYzHH0lSeguYtuoY9TS3jayrCLtj6Jd3VefrJ1z-Eqyw5c2UoTS3gcaoww/exec"
+        method="POST"
+        class="contact-form"
+      >
+        <label for="name">namn</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="ditt namn"
+          required
+        />
+
+        <label for="phone">telefonnummer</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="070-123 45 67"
+          required
+        />
+
+        <label for="email">mejladress</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="namn@mail.com"
+          required
+        />
+
+        <label for="guests">antal gäster</label>
+        <select id="guests" name="guests" required>
+          <option value="">välj antal</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6+</option>
+        </select>
+
+        <label for="date">välj datum</label>
+        <input
+          type="date"
+          id="date"
+          name="date"
+          required
+          onkeydown="return false"
+          onpaste="return false"
+        />
+
+        <label for="message">allergier / kommentar</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          placeholder="uppge allergier, specialkost och/eller övrig info..."
+        ></textarea>
+
+        <button type="submit">skicka</button>
+      </form>
+    </main>
+
+    <!-- Spinner-overlay ENDAST för spinner -->
+    <div class="spinner-overlay" id="spinner-overlay">
+      <div class="spinner"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>öppettider</h3>
+          <ul>
+            <li><b>mån:</b> 10:00-15:00</li>
+            <li><b>tis:</b> 10:00-19:00</li>
+            <li><b>ons:</b> 10:00-15:00</li>
+            <li><b>tors:</b> 10:00-15:00 / 17:30-21:30</li>
+            <li><b>fre-lör:</b> 10:00-21:30</li>
+            <li><b>sön:</b> stängt</li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>kontakt</h3>
+          <ul>
+            <li>
+              📍<a
+                href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2131.8104897753074!2d11.959282776541617!3d57.702689440147495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff30036506221%3A0x62ce6f5a3436577a!2sAl%20Banco!5e0!3m2!1sen!2sse!4v1749126278179!5m2!1sen!2sse"
+                class="contact-links"
+                target="_blank"
+                >kaserntorget 7, göteborg</a
+              >
+            </li>
+            <li>
+              📞<a href="tel: +46720351104" class="contact-links"
+                >0720-351104</a
+              >
+            </li>
+            <li>
+              ✉️
+              <a href="mailto:info@albanco.se" class="contact-links"
+                >info@albanco.se</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>följ oss</h3>
+          <ul class="socials">
+            <li>
+              <a
+                href="https://www.instagram.com/albancopasta/?hl=en"
+                class="contact-links"
+                >instagram</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/p/Al-Banco-Pasta-61555427017884/"
+                class="contact-links"
+                >facebook</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Datumväljare -->
+    <script>
+      const dateInput = document.getElementById("date");
+      dateInput.addEventListener("mousedown", (e) => {
+        e.preventDefault();
+        if (dateInput.showPicker) dateInput.showPicker();
+      });
+    </script>
+
+    <!-- Form submission med spinner -->
+    <script>
+      const form = document.getElementById("booking-form");
+      const spinner = document.getElementById("spinner-overlay");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        // Visa spinner
+        spinner.style.display = "flex";
+
+        const formData = new FormData(form);
+        const params = new URLSearchParams();
+        formData.forEach((value, key) => params.append(key, value));
+
+        try {
+          const response = await fetch(form.action, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+            },
+            body: params.toString(),
+          });
+
+          if (response.ok) {
+            window.location.href = "tack.html";
+          } else {
+            alert("Något gick fel. Försök igen.");
+            spinner.style.display = "none";
+          }
+        } catch (err) {
+          alert("Något gick fel. Försök igen.");
+          spinner.style.display = "none";
+        }
+      });
+    </script>
+    <script>
+      // Hamburgermeny
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("navLinks");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navLinks.classList.toggle("active");
+      });
+
+      // Stäng menyn när man klickar på en länk
+      const links = navLinks.querySelectorAll("a");
+      links.forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navLinks.classList.remove("active");
+        });
+      });
+    </script>
+  </body>
+</html>

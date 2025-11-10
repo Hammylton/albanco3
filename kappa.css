@@ -25,7 +25,7 @@ button {
   letter-spacing: 3px;
   font-weight: 350;
   font-size: 30px;
-  color: #ffbd59;
+  color: #ffce85;
   text-decoration: none;
 }
 
@@ -41,7 +41,7 @@ header {
   background-color: #1d1d1d; /* lite starkare än bakgrundsfärgen #221914 */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* lätt skugga för djup */
   height: 160px;
-  border-bottom: 0.5px solid #ffbd59;
+  border-bottom: 0.5px solid #ffce85;
 }
 
 .logo {
@@ -71,7 +71,7 @@ header {
 /* Knapp */
 button {
   padding: 9px 37px;
-  background-color: #ffbd59; /*#221914*/
+  background-color: #ffce85; /*#221914*/
   color: #1d1d1d;
   border: none;
   border-radius: 50px;
@@ -94,7 +94,7 @@ button:hover {
 h1 {
   font-weight: lighter;
   font-size: 68px;
-  color: #ffbd59;
+  color: #ffce85;
   margin-bottom: 0px;
   margin-top: 40px;
   letter-spacing: 10px;
@@ -108,7 +108,7 @@ h1 {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 10px;
-  color: #ffbd59;
+  color: #ffce85;
   font-size: 20px;
   line-height: 1.3;
   font-weight: 300;
@@ -295,7 +295,7 @@ iframe {
 
 .buttons button {
   margin-top: 20px;
-  background-color: #ffbd59;
+  background-color: #ffce85;
   border: none;
   color: #1d1d1d;
   font-weight: lighter;
@@ -338,7 +338,7 @@ h4 {
 
 .contact h2,
 .about-us h2 {
-  color: #ffbd59;
+  color: #ffce85;
   font-size: 50px;
   font-family: "Libre Baskerville", sans-serif;
   font-weight: 100;
@@ -365,7 +365,7 @@ h4 {
 .menu-header {
   margin-top: 200px;
   text-align: center;
-  color: #ffbd59;
+  color: #ffce85;
   font-size: 50px;
   font-family: "Libre Baskerville", sans-serif;
   font-weight: 100;
@@ -377,7 +377,7 @@ h4 {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 10px;
-  color: #ffbd59;
+  color: #ffce85;
   font-size: 20px;
   line-height: 1.3;
   font-weight: 300;
@@ -401,7 +401,7 @@ h4 {
 }
 
 .intro2 {
-  color: #ffbd59;
+  color: #ffce85;
   font-size: 20px;
   line-height: 1.3;
   font-weight: 300;
