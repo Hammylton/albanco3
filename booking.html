@@ -83,25 +83,6 @@
         }
       });
     </script>
-    <script>
-      // Hamburgermeny
-      const hamburger = document.getElementById("hamburger");
-      const navLinks = document.getElementById("navLinks");
-
-      hamburger.addEventListener("click", () => {
-        hamburger.classList.toggle("active");
-        navLinks.classList.toggle("active");
-      });
-
-      // Stäng menyn när man klickar på en länk
-      const links = navLinks.querySelectorAll("a");
-      links.forEach((link) => {
-        link.addEventListener("click", () => {
-          hamburger.classList.remove("active");
-          navLinks.classList.remove("active");
-        });
-      });
-    </script>
   </head>
   <body>
     <header>
@@ -270,5 +251,24 @@
         </div>
       </div>
     </footer>
+    <script>
+      // Hamburgermeny
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("navLinks");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navLinks.classList.toggle("active");
+      });
+
+      // Stäng menyn när man klickar på en länk
+      const links = navLinks.querySelectorAll("a");
+      links.forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navLinks.classList.remove("active");
+        });
+      });
+    </script>
   </body>
 </html>
