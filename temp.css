@@ -1013,6 +1013,11 @@ option {
   border-radius: 3px;
 }
 
+.support {
+  font-size: 14px;
+  color: #faf3e0;
+}
+
 /* Animering när menyn är öppen */
 .hamburger.active span:nth-child(1) {
   transform: rotate(-45deg) translate(-6px, 6px);
