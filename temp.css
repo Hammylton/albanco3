@@ -415,6 +415,11 @@ iframe {
   color: #ffbd59;
 }
 
+.sub-text2 a {
+  color: #faf3e0;
+  font-size: 16px;
+}
+
 .item-row h4 {
   font-size: 28px;
   margin-bottom: 25px;
