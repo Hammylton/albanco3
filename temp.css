@@ -416,7 +416,7 @@ iframe {
 }
 
 .sub-text2 a {
-  color: #faf3e0;
+  color: #faf3e0 !important;
   font-size: 16px;
 }
 
