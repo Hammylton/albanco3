@@ -407,6 +407,14 @@ iframe {
   color: #1d1d1d;
 }
 
+.sub-text2 {
+  text-align: center;
+  margin-top: 20px;
+  letter-spacing: 4px;
+  font-size: 16px;
+  color: #ffbd59;
+}
+
 .item-row h4 {
   font-size: 28px;
   margin-bottom: 25px;
@@ -923,6 +931,28 @@ option {
   animation: spin 1s linear infinite;
 }
 
+#time:disabled {
+  background-color: #dddddda9;
+  color: #555; /* textfärg */
+  cursor: not-allowed; /* ändrar muspekaren till "ej tillåtet" */
+}
+
+.datetime-row {
+  display: flex;
+  gap: 10px; /* avstånd mellan datum och tid */
+}
+
+.datetime-field {
+  flex: 1; /* båda fälten tar lika mycket plats */
+  display: flex;
+  flex-direction: column; /* label ovanför input */
+}
+
+.datetime-field label {
+  margin-bottom: 4px; /* lite mellanrum mellan label och input */
+  font-weight: 500;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -934,8 +964,12 @@ option {
 
 @media only screen and (max-width: 600px) {
   iframe {
-    width: 430px;
+    width: 350px;
   }
+}
+
+.contact h2 {
+  font-size: 32px;
 }
 
 @media only screen and (max-width: 600px) {

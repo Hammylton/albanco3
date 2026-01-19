@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html lang="sv">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-3B554LPZT6"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-3B554LPZT6");
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>al banco | tack!</title>
-    <link rel="stylesheet" href="temp.css" />
+    <link rel="stylesheet" href="temp.css?v=2" />
   </head>
   <body>
     <header>
@@ -41,7 +55,10 @@
 
     <main class="thank-you">
       <h2>tack för din bokningsförfrågan!</h2>
-      <p>vi hör av oss till dig inom kort.</p>
+      <p>
+        observera att eventuell bordsbokning endast gäller efter att vi har
+        bekräftat den.<br />vi hör av oss till dig inom kort.
+      </p>
       <a href="index.html" class="back-home">tillbaka till startsidan</a>
     </main>
     <footer class="footer">
@@ -49,11 +66,8 @@
         <div class="footer-section">
           <h3>öppettider</h3>
           <ul>
-            <li><b>mån:</b> 10:00-15:00</li>
-            <li><b>tis:</b> 10:00-19:00</li>
-            <li><b>ons:</b> 10:00-15:00</li>
-            <li><b>tors:</b> 10:00-15:00 / 17:30-21:30</li>
-            <li><b>fre-lör:</b> 10:00-21:30</li>
+            <li><b>mån-tors:</b> 10:00-15:00</li>
+            <li><b>fre-lör:</b> 10:00-19:00</li>
             <li><b>sön:</b> stängt</li>
           </ul>
         </div>
