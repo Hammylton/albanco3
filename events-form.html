@@ -1,10 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="sv">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-3B554LPZT6"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-3B554LPZT6");
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>al banco | hem</title>
-    <link rel="stylesheet" href="temp.css" />
+    <title>al banco | bokningsförfrågan</title>
+    <link rel="stylesheet" href="temp.css?v=3" />
+    <link rel="icon" type="image/x-icon" href="favicon1.png" />
   </head>
   <body>
     <header>
@@ -87,8 +102,8 @@
           type="date"
           name="date"
           required
-          onkeydown="return false"
-          onpaste="return false"
+          onkeydown="return false;"
+          onpaste="return false;"
         />
 
         <label for="message">meddelande</label>
@@ -102,7 +117,7 @@
         <input
           type="hidden"
           name="_next"
-          value="https://hammylton.github.io/albanco3/tack.html"
+          value="https://albanco.se/tack.html"
         />
 
         <input type="hidden" name="_captcha" value="false" />
@@ -112,8 +127,6 @@
           name="_subject"
           value="Ny eventbokningsförfrågan via hemsidan"
         />
-
-        <input type="hidden" name="_cc" value="info@albanco.se" />
 
         <button type="submit">skicka</button>
       </form>
@@ -130,7 +143,7 @@
     <!-- Datumväljare -->
     <script>
       const dateInput = document.getElementById("date");
-      dateInput.addEventListener("mousedown", (e) => {
+      dateInput.addEventListener("focus", (e) => {
         e.preventDefault();
         if (dateInput.showPicker) dateInput.showPicker();
       });
@@ -178,10 +191,9 @@
         <div class="footer-section">
           <h3>öppettider</h3>
           <ul>
-            <li><b>mån:</b> 10:00-15:00</li>
-            <li><b>tis:</b> 10:00-19:00</li>
-            <li><b>ons:</b> 10:00-15:00</li>
-            <li><b>tors:</b> 10:00-15:00 / 17:30-21:30</li>
+            <li><b>mån-tis:</b> 10:00-15:00</li>
+            <li><b>ons:</b> 10:00-19:00</li>
+            <li><b>tors:</b> 10:00-15:00</li>
             <li><b>fre-lör:</b> 10:00-21:30</li>
             <li><b>sön:</b> stängt</li>
           </ul>

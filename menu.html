@@ -1,10 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="sv">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-3B554LPZT6"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-3B554LPZT6");
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>al banco | meny</title>
-    <link rel="stylesheet" href="temp.css" />
+    <link rel="stylesheet" href="temp.css?v=3" />
+    <link rel="icon" type="image/x-icon" href="favicon1.png" />
   </head>
   <body>
     <header>
@@ -40,16 +55,65 @@
     </header>
 
     <main class="menus">
-      <h2 class="menu-header">våra menyer</h2>
+      <h2 class="menu-header">vår meny</h2>
       <div class="menu-container">
         <section class="menu-wrapper">
-          <h2>lunch</h2>
-          <p class="sub-text">
-            serveras fram till kl 18:00<br />lunchpris vardagar 11:00-14:00
-            <b>129:-</b>
-          </p>
+          <!--<h2>lunch</h2>-->
+          <h4>antipasti</h4>
+          <div class="menu-item2">
+            <div class="item-row2">
+              <h3>la caprese</h3>
+            </div>
+            <h3 class="price">119:-</h3>
+          </div>
 
-          <div class="menu-item">
+          <div class="menu-item2">
+            <div class="item-row2">
+              <h3>gamberetti</h3>
+            </div>
+            <h3 class="price">119:-</h3>
+          </div>
+          <h4>primo</h4>
+          <p class="sub-text3">(lunchpris 11:00-14:00 <b>139:-</b>)</p>
+          <div class="menu-item2">
+            <div class="item-row2">
+              <h3>la carbonara</h3>
+            </div>
+            <h3 class="price">189:-</h3>
+          </div>
+          <div class="menu-item2">
+            <div class="item-row2">
+              <h3>amatriciana</h3>
+            </div>
+            <h3 class="price">189:-</h3>
+          </div>
+          <div class="menu-item2">
+            <div class="item-row2">
+              <h3>funghi &amp; tartufo</h3>
+            </div>
+            <h3 class="price">189:-</h3>
+          </div>
+          <div class="menu-item2">
+            <div class="item-row2">
+              <h3>pistage pesto</h3>
+            </div>
+            <h3 class="price">169:-</h3>
+          </div>
+          <div class="menu-item2">
+            <div class="item-row2">
+              <h3>pomodoro</h3>
+            </div>
+            <h3 class="price">159:-</h3>
+          </div>
+
+          <h4>dolci</h4>
+          <div class="menu-item2">
+            <div class="item-row2">
+              <h3>limone limone limone</h3>
+            </div>
+            <h3 class="price">99:-</h3>
+          </div>
+          <!--<div class="menu-item">
             <div class="item-row">
               <h3>carbonara</h3>
               <p>guanciale, pecorino, äggula</p>
@@ -87,12 +151,12 @@
               <p>tomat, chili, vitlök (stark)</p>
             </div>
             <h3 class="price">159:-</h3>
-          </div>
+          </div>-->
         </section>
 
         <!-- A LA CARTE-MENY -->
 
-        <section class="menu-wrapper">
+        <!-- <section class="menu-wrapper">
           <h2>a la carte</h2>
           <p class="sub-text">serveras mellan 18:00 och 22:00</p>
           <h4>antipasti</h4>
@@ -160,7 +224,7 @@
             </div>
             <h3 class="price">99:-</h3>
           </div>
-        </section>
+        </section>-->
       </div>
     </main>
     <button onclick="topFunction()" id="myBtn" title="Go to top">
@@ -197,10 +261,9 @@
         <div class="footer-section">
           <h3>öppettider</h3>
           <ul>
-            <li><b>mån:</b> 10:00-15:00</li>
-            <li><b>tis:</b> 10:00-19:00</li>
-            <li><b>ons:</b> 10:00-15:00</li>
-            <li><b>tors:</b> 10:00-15:00 / 17:30-21:30</li>
+            <li><b>mån-tis:</b> 10:00-15:00</li>
+            <li><b>ons:</b> 10:00-19:00</li>
+            <li><b>tors:</b> 10:00-15:00</li>
             <li><b>fre-lör:</b> 10:00-21:30</li>
             <li><b>sön:</b> stängt</li>
           </ul>

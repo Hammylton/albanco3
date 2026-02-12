@@ -415,6 +415,16 @@ iframe {
   color: #ffbd59;
 }
 
+.sub-text3 {
+  text-align: center;
+  padding-bottom: 15px;
+  margin-top: -20px;
+  letter-spacing: 4px;
+  font-size: 14px;
+  color: #1d1d1d;
+  white-space: nowrap;
+}
+
 .sub-text2 a {
   color: #faf3e0 !important;
   font-size: 16px;
