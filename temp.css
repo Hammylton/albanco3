@@ -1012,7 +1012,8 @@ option {
   }
 
   .menu-wrapper h4 {
-    font-size: 22px;
+    font-size: 20px;
+    letter-spacing: 5px;
   }
 
   .menu-wrapper p {
